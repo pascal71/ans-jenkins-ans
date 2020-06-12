@@ -1,0 +1,4 @@
+jenkins_prereq_rpms:
+  - java-1.8.0-openjdk-devel
+  - git
+  - yum-utils

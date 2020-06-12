@@ -1,0 +1,169 @@
+my_jenkins_plugins:
+  "git-client":
+    enabled: yes
+  "credentials":
+    enabled: yes
+  "momentjs":
+    enabled: yes
+  "lockable-resources":
+    enabled: yes
+  "matrix-project":
+    enabled: yes
+  "pipeline-milestone-step":
+    enabled: yes
+  "workflow-cps":
+    enabled: yes
+  "apache-httpcomponents-client-4-api":
+    enabled: yes
+  "cloudbees-folder":
+    enabled: yes
+  "pam-auth":
+    enabled: yes
+  "maven-plugin":
+    enabled: yes
+  "ws-cleanup":
+    enabled: yes
+  "antisamy-markup-formatter":
+    enabled: yes
+  "docker-commons":
+    enabled: yes
+  "variant":
+    enabled: yes
+  "durable-task":
+    enabled: yes
+  "mailer":
+    enabled: yes
+  "mapdb-api":
+    enabled: yes
+  "ant":
+    enabled: yes
+  "pipeline-model-api":
+    enabled: yes
+  "github":
+    enabled: yes
+  "pipeline-stage-step":
+    enabled: yes
+  "token-macro":
+    enabled: yes
+  "workflow-aggregator":
+    enabled: yes
+  "script-security":
+    enabled: yes
+  "command-launcher":
+    enabled: yes
+  "authentication-tokens":
+    enabled: yes
+  "email-ext":
+    enabled: yes
+  "workflow-support":
+    enabled: yes
+  "jackson2-api":
+    enabled: yes
+  "pipeline-input-step":
+    enabled: yes
+  "ace-editor":
+    enabled: yes
+  "workflow-durable-task-step":
+    enabled: yes
+  "workflow-job":
+    enabled: yes
+  "pipeline-stage-tags-metadata":
+    enabled: yes
+  "plain-credentials":
+    enabled: yes
+  "pipeline-aws":
+    enabled: yes
+  "ssh-slaves":
+    enabled: yes
+  "git-server":
+    enabled: yes
+  "credentials-binding":
+    enabled: yes
+  "pipeline-model-declarative-agent":
+    enabled: yes
+  "structs":
+    enabled: yes
+  "handlebars":
+    enabled: yes
+  "build-timeout":
+    enabled: yes
+  "junit":
+    enabled: yes
+  "workflow-cps-global-lib":
+    enabled: yes
+  "workflow-multibranch":
+    enabled: yes
+  "javadoc":
+    enabled: yes
+  "aws-java-sdk":
+    enabled: yes
+  "ssh-credentials":
+    enabled: yes
+  "github-branch-source":
+    enabled: yes
+  "pipeline-build-step":
+    enabled: yes
+  "scm-api":
+    enabled: yes
+  "pipeline-model-extensions":
+    enabled: yes
+  "display-url-api":
+    enabled: yes
+  "gradle":
+    enabled: yes
+  "docker-workflow":
+    enabled: yes
+  "workflow-scm-step":
+    enabled: yes
+  "workflow-basic-steps":
+    enabled: yes
+  "timestamper":
+    enabled: yes
+  "resource-disposer":
+    enabled: yes
+  "docker-java-api":
+    enabled: yes
+  "matrix-auth":
+    enabled: yes
+  "pipeline-graph-analysis":
+    enabled: yes
+  "docker-plugin":
+    enabled: yes
+  "copyartifact":
+    enabled: yes
+  "bouncycastle-api":
+    enabled: yes
+  "subversion":
+    enabled: yes
+  "workflow-api":
+    enabled: yes
+  "branch-api":
+    enabled: yes
+  "pipeline-github-lib":
+    enabled: yes
+  "workflow-step-api":
+    enabled: yes
+  "github-api":
+    enabled: yes
+  "jdk-tool":
+    enabled: yes
+  "ldap":
+    enabled: yes
+  "amazon-ecr":
+    enabled: yes
+  "pipeline-rest-api":
+    enabled: yes
+  "pipeline-stage-view":
+    enabled: yes
+  "git":
+    enabled: yes
+  "trilead-api":
+    enabled: yes
+  "aws-credentials":
+    enabled: yes
+  "jsch":
+    enabled: yes
+  "pipeline-model-definition":
+    enabled: yes
+  "jquery-ui":
+    enabled: yes

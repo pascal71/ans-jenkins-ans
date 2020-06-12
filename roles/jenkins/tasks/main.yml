@@ -1,0 +1,66 @@
+- name: Add the Jenkins yum repo
+  become: yes
+  yum_repository:
+    name: "jenkins"
+    description: "Jenkins repo"
+    gpgcheck: yes
+    enabled: yes
+    baseurl: "{{ jenkins_repo_url }}"
+    gpgkey: "{{ jenkins_repo_gpg }}"
+
+- name: Install Jenkins
+  become: yes
+  yum:
+    name: "{{ jenkins_pkg }}"
+    state: latest
+
+- name: Bootstrap Jenkins - create directory
+  become: yes
+  file:
+    path: /var/lib/jenkins/init.groovy.d
+    state: directory
+    owner: root
+
+- name: Generate Groovy bootstrap script
+  become: yes
+  template:
+    src: basic-security.groovy.j2
+    dest: /var/lib/jenkins/init.groovy.d/basic-security.groovy
+
+- name: Start Jenkins and enable at reboot
+  become: yes
+  systemd:
+    name: jenkins
+    state: started
+    enabled: yes
+
+- name: Waiting for Jenkins ready-to-serve state
+  uri:
+    status_code:
+      - 200
+      - 302
+      - 403
+      - 503
+    url: "http://127.0.0.1:8080/cli/"
+    url_username: "{{ jenkins_admin_user }}"
+    url_password: "{{ jenkins_admin_passwd }}"
+    force_basic_auth: true
+  register: result
+  until: result.status == 200
+  retries: 30
+  delay: 5
+
+- name: diag
+  debug:
+    msg: "{{ result }}"
+
+- name: diag
+  debug:
+    msg: "{{ result.status }}"
+
+
+#- name: Remove bootstrap script
+#  become: yes
+#  file:
+#    path: /var/lib/jenkins/init.groovy.d/basic-security.groovy
+#    state: absent

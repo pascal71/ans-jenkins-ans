@@ -1,0 +1,6 @@
+- name: Restart docker container engine
+  become: yes
+  systemd:
+    name: docker
+    state: restarted
+  listen: restart_docker

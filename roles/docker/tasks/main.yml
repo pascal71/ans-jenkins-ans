@@ -1,0 +1,19 @@
+- name: Install docker
+  become: yes
+  yum:
+    name: docker
+    state: latest
+  notify: restart_docker
+
+- name: Enable docker at restart
+  become: yes
+  systemd:
+    name: docker
+    enabled: yes 
+
+- name: Add docker group to Jenkins user
+  become: yes
+  user:
+    name: jenkins
+    groups: 'docker'
+    append: yes

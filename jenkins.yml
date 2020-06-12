@@ -1,0 +1,14 @@
+- name: Deploy AWS host for Jenkins
+  hosts: localhost
+  connection: local
+  roles:
+    - aws
+
+- name: Playbook to deploy Jenkins
+  hosts: jenkins_master
+  user: ec2-user
+  roles:
+    - prereqs
+    - docker
+    - jenkins
+    - jplugins

@@ -1,0 +1,5 @@
+key_name: id_rsa
+region: us-west-2
+image: ami-0e34e7b9ca0ace12d
+id: "jenkins-app"
+sec_group: "{{ id }}-sec"

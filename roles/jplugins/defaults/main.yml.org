@@ -1,0 +1,15 @@
+my_jenkins_plugins:
+  token-macro:
+    enabled: yes
+  build-pipeline-plugin:
+    enabled: yes
+  "amazon-ecr":
+    enabled: yes
+  "docker-workflow":
+    enabled: yes
+  "s3":
+    enabled: yes
+  "aws-bucket-credentials":
+    enabled: yes
+  "pipeline-aws":
+    enabled: yes

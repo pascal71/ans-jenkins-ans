@@ -1,0 +1,5 @@
+- name: Install prereq packages for Jenkins
+  become: yes
+  yum:
+    name: "{{ jenkins_prereq_rpms }}"
+    state: latest

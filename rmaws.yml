@@ -1,0 +1,5 @@
+- name: Playbook to remove AWS EC2 instance
+  hosts: localhost
+  connection: local
+  roles:
+    - cleanup

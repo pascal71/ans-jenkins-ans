@@ -1,0 +1,7 @@
+- name: Playbook to deploy Jenkins
+  hosts: jenkins_master
+  roles:
+    - prereqs
+    - docker
+    - jenkins
+    - jplugins

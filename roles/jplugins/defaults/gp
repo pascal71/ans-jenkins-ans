@@ -1,0 +1,8 @@
+echo "my_jenkins_plugins:" > main.yml
+
+while read LINE
+do
+	PLUGIN="$(echo "${LINE}" | cut -d '(' -f2 | cut -d  ')' -f1 )"
+	echo "  \"${PLUGIN}\":" >> main.yml
+	echo "    enabled: yes" >> main.yml
+done
